@@ -23,7 +23,7 @@ func main() {
 		fmt.Println("Dial error:",err)
 		os.Exit(1)
 	}
-	d := time.Now().Add(1000 * time.Millisecond)
+	d := time.Now().Add(5000 * time.Millisecond)
 	ctx, cancel := context.WithDeadline(context.Background(),d)
 	defer cancel()
 	balance, err := client.BalanceAt(ctx, address,nil)
